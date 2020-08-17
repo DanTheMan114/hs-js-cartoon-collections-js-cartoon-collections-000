@@ -18,20 +18,29 @@
    return calls; // give back the array calls
  }
 
- function longPlaneteerCalls(words) {  // number three 
-   for(var i = 0; i < words.length; i++){  // goes through the whole word list 
-     if(words[i].length > 4){ //if any items in the words array has more than 4 letters 
-       return true; // 
-     }
+ function longPlaneteerCalls(words) {  // number three.... with a forEach
+ let result = false
+ words.forEach(function(word){
+   if(word.length > 4){ console.log(word)
+     result = true;
    }
-   return false; // if non is longer the four
+ })
+ return result;
+
+   //for(var i = 0; i < words.length; i++){  // goes through the whole word in the list 
+     // if(words[i].length > 4){ //if any items in the words array has more than 4 letters 
+       //return true; // 
+    // }
+   // }
+   // return false; // if non is longer the four
  }
  
- function findTheCheese (foods) {
-  var cheese = ["camembert", "cheddar", "gouda"];
-	for(var i = 0; i < foods.length; i++) {
-		var cheeseType = cheese.indexOf(foods[i]);
-		if(cheeseType !== -1) {
+ function findTheCheese(foods) { // number four
+  var cheese = ["camembert", "cheddar", "gouda"]; // list of cheeses 
+  // var snacks = ["crackers, chips, gouda"]; 
+	for(var i = 0; i < foods.length; i++) { // this loop
+		var cheeseType = cheese.indexOf(foods[i]); // we wan
+		if(cheeseType !== -1) { // we say -1 to include the zero 
 			return foods[i];
 		}
 	}
